@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/blog.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>PromptPay - พร้อมเพย์</title>
+</head>
+<body>
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+              <div class="col-4 pt-1">
+                <a class="link-secondary" href="#">Home</a>
+              </div>
+              <div class="col-4 text-center">
+                <a class="blog-header-logo text-dark" href="#">King</a>
+              </div>
+              <div class="col-4 d-flex justify-content-end align-items-center">
+                <% if (loggedIn) { %>
+                    <a class="btn btn-sm btn-danger" href="/logout">Logout</a>
+                <% } %>
+        
+                <% if (!loggedIn) { %>
+                    <a class="btn btn-sm btn-outline-secondary mx-3" href="/login">Sign In</a>
+                    <a class="btn btn-sm btn-success" href="/register">Sign Up</a>
+                <% } %>
+              </div>
+            </div>
+    </header>
+    <div class="container mt-15">
+        <div class="maq-out">
+            <div class="row m-0">
+                <div class="col-lg-12">
+                    <div class="maq-in">
+                        <marquee class="marquee-text" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="vertical-align: middle;">ระบบเติมเงินเกมส์ออนไลน์สามารถใช้งานได้ปกติแล้วนะคะ ลูกค้าสามารถทำการสั่งซื้อได้ด้วยตนเองผ่านระบบอัตโนมัติได้ตลอด 24 ช.ม. ขอบคุณที่ใช้บริการ</marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-30">
+        <!--breadcrumb start-->
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href=".\">หน้าหลัก</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">PromptPay - พร้อมเพย์</li>
+        </ol>
+        <!--breadcrumb end-->
+
+        <div class="section pb-20">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bg_content">
+                        <h3 class="">
+                            <img style="width:54px;" src="https://otp24hr.com/views/assets/image/pp_logo.png?v=5">&nbsp; PromptPay - พร้อมเพย์
+                        </h3>
+                        <small style="color: var(--color3) !important;">
+                            <i class="fas fa-exclamation-circle red"></i>
+                            กรุณาชำระเงิน !! <span class="red required">*</span>
+                        </small>
+                        <hr>
+                        <div class="row justify-content-center mt-2 mb-2">
+                            <div class="col-lg-8 mt-2 mb-2 text-center">
+                                <img src="https://cdn.discordapp.com/attachments/726406201927008276/1144659464465690825/howtopp.png" style="width: 744px;" data-filename="ซองวอเล็ท1.png">
+                                <br>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-12 mb-2">
+                                <div id="error"></div>
+                                <div class="form-fild">
+                                    <label style="color: var(--color3) !important;">
+                                        จำนวนเงินที่ต้องชำระ <span class="red required">*</span>
+                                    </label>
+                                    <input type="number" id="amount" placeholder="100" class="form-control">
+                                </div>
+                                <button class="btn btn-primary btn-lg mt-2" id="promptpay-btn">ยืนยันการชำระ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <footer class="footer mt-auto footer-section section bg-gray-two">
+            <div class="footer-top section">
+                <div class="container">
+                    <div class="row">
+                    <div class="footer-widget col-lg-4 col-md-6 col-sm-6 col-12 mt-30">
+                            <p>Website นี้เป็นการขายรหัสสตรีมมิ่ง โปรดเลือกได้ตามใจชอบ</p>
+                        </div>
+        
+                        <div class="footer-widget col mt-30">
+                            <h4 class="title">
+                                <span class="text mb-15">ติดต่อเรา</span>
+                            </h4>
+        
+                            <ul class="ft-menu mt-30">
+                            <li>
+                        <a class="mb-15" href="" target="_blank">
+                          <i class="bi bi-line"></i>
+                          <span>Kinggg</span>
+                        </a>
+                      </li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget col mt-30">
+                            <h4 class="title">
+                                <span class="text mb-15">การใช้งาน</span>
+                            </h4>
+                            <ul class="ft-menu mt-30 ">
+                                <li>
+                                    <a href="/register" class="mb-15">Register</a>
+                                    </li>
+                                    <li>
+                                    <a href="/logout" class="mb-15">Logout</a>
+                                    </li>
+                                    </ul>
+                        </div>
+                            <div class="mb-3">
+                  <img class="w-50" style="max-width: 150px;" src="">
+                  </div>
+                        </div>
+                        <!--Footer Widget start-->
+                    <div class="logo-payment mt-5 mb-3 ">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688114282467408/logo-ture.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688114546704405/logo-turemoney.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688115192631388/logo-kbank.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688115385565214/logo-krungsri.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688114014035998/logo-scb.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688116165705838/logo-prompt-pay.jpg">
+        
+                        </div>
+                </div>
+            </div>
+            </div>
+            <!--Footer bottom start-->
+            <div class="footer-bottom section navbar-fixed-bottom">
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-12 pt-25 pb-25">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="copyright-f">
+                                        <p>Copyright © 2023 Jesadakorn All Rights Reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer bottom end-->
+        </footer>
+    </footer>
+    <script>
+        function showPaymentConfirmation() {
+            // รับค่าจำนวนเงินจาก input ที่มี id "amount"
+            var amount = document.getElementById("amount").value;
+    
+            // แสดงหน้าต่างแจ้งเตือน
+            alert("ชำระเงินสำเร็จ: " + amount + " บาท");
+    
+            // รอ 5 วินาที
+            setTimeout(function() {
+                // ปิดหน้าต่างแจ้งเตือน
+                window.close();
+            }, 5000);
+        }
+    
+        document.getElementById("promptpay-btn").addEventListener("click", showPaymentConfirmation);
+    </script>
+</body>
+</html>

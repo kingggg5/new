@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Website</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Include custom CSS --> 
+    <link rel="stylesheet" href="/css/blog.css">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+     <!-- Custom styles for this template -->
+     <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="container">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+              <div class="col-4 pt-1">
+                <a class="link-secondary" href="#">Home</a>
+              </div>
+              <div class="col-4 text-center">
+                <a class="blog-header-logo text-dark" href="#">King</a>
+              </div>
+              <div class="col-4 d-flex justify-content-end align-items-center">
+                <% if (loggedIn) { %>
+                    <a class="btn btn-sm btn-danger" href="/logout">Logout</a>
+                <% } %>
+        
+                <% if (!loggedIn) { %>
+                    <a class="btn btn-sm btn-outline-secondary mx-3" href="/login">Sign In</a>
+                    <a class="btn btn-sm btn-success" href="/register">Sign Up</a>
+                <% } %>
+              </div>
+            </div>
+    </header>
+    <div class="container mt-15">
+        <div class="maq-out">
+            <div class="row m-0">
+                <div class="col-lg-12">
+                    <div class="maq-in">
+                        <marquee class="marquee-text" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="vertical-align: middle;">ระบบเติมเงินเกมส์ออนไลน์สามารถใช้งานได้ปกติแล้วนะคะ ลูกค้าสามารถทำการสั่งซื้อได้ด้วยตนเองผ่านระบบอัตโนมัติได้ตลอด 24 ช.ม. ขอบคุณที่ใช้บริการ</marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-white text-center py-5">
+        <h1>Welcome to Our Shop</h1>
+        <p>Discover amazing products and deals.</p>
+    </section>
+    <!-- Product Section -->
+    <section class="products py-5">
+        <div class="container" >
+            <div class="section-title text-left mb-20 pt-20" style="padding-left: 1px; padding-right: 1px;">
+                <h2>Streaming</h2>
+                <div class="row">
+                    <!-- Product Category: Games -->
+                    <div class="owl-item" style="width: auto;">
+                        <div class="col-12" style="width:170px">
+                            <div class="single-grid-product mb-30">
+                                <div class="card" style="margin-bottom:10px;">
+                                    <img src="https://cdn.discordapp.com/attachments/726406201927008276/1123858994654629888/unnamed_copy.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                    <div class="card-body">
+                                        <div class="product-content text-center"></div>
+                                        <h5 class="card-title">Youtube</h5>
+                                        <p class="card-text">$49.99</p>
+                                        <p class="card-text">30 Days</p>
+                                        <a href="/topup" class="btn btn-primary">buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Product Category: Disney -->
+                    <div class="owl-item" style="width: auto;">
+                        <div class="col-12" style="width:170px">
+                            <div class="single-grid-product mb-30">
+                                <div class="card" style="margin-bottom:10px;">
+                                    <img src="https://cdn.discordapp.com/attachments/726406201927008276/1014598572395733134/disney.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                    <div class="card-body">
+                                        <div class="product-content text-center"></div>
+                                        <h5 class="card-title">Disney</h5>
+                                        <p class="card-text">$49.99</p>
+                                        <p class="card-text">30 Days</p>
+                                        <a href="/topup" class="btn btn-primary">buy now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- Product Category: Streaming Services -->
+                <div class="owl-item" style="width: auto;">
+                    <div class="col-12" style="width:170px">
+                        <div class="single-grid-product mb-30">
+                            <div class="card" style="margin-bottom:10px;">
+                                <img src="https://cdn.discordapp.com/attachments/726406201927008276/1123859331453046874/prime.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                <div class="card-body">
+                                    <div class="product-content text-center"></div>
+                                    <h5 class="card-title">Prime</h5>
+                                    <p class="card-text">$49.99</p>
+                                    <p class="card-text">30 Days</p>
+                                    <a href="/topup" class="btn btn-primary">buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item" style="width: auto;">
+                    <div class="col-12" style="width:170px">
+                        <div class="single-grid-product mb-30">
+                            <div class="card" style="margin-bottom:10px;">
+                                <img src="https://cdn.discordapp.com/attachments/726406201927008276/1123859114171310120/bb.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                <div class="card-body">
+                                    <div class="product-content text-center"></div>
+                                    <h5 class="card-title">Billi</h5>
+                                    <p class="card-text">$49.99</p>
+                                    <p class="card-text">30 Days</p>
+                                    <a href="/topup" class="btn btn-primary">buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-item" style="width: auto;">
+                    <div class="col-12" style="width:170px">
+                        <div class="single-grid-product mb-30">
+                            <div class="card" style="margin-bottom:10px;">
+                                <img src="https://cdn.discordapp.com/attachments/726406201927008276/1123857003962441769/Ne.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                <div class="card-body">
+                                    <div class="product-content text-center"></div>
+                                    <h5 class="card-title">Netflix</h5>
+                                    <p class="card-text">$49.99</p>
+                                    <p class="card-text">30 Days</p>
+                                    <a href="/topup" class="btn btn-primary">buy now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+                <!-- Add more product cards here -->
+                <section class="products py-5">
+                    <div class="container" >
+                        <div class="section-title text-left mb-20 pt-20" style="padding-left: 1px; padding-right: 1px;">
+                            <h2>Games</h2>
+                        <div class="row">
+                            <!-- Product Category: Games -->
+                            <div class="owl-item" style="width: auto;">
+                                <div class="col-12" style="width:170px">
+                                    <div class="single-grid-product mb-30">
+                                        <div class="card" style="margin-bottom:10px;">
+                                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1129459585795772426/rag-origin2.png" class="card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                            <div class="card-body">
+                                                <div class="product-content text-center"></div>
+                                                <h5 class="card-title">Ragnarok</h5>
+                                                <p class="card-text">$49.99</p>
+                                                <p class="card-text">500 Points</p>
+                                                <a href="/topup" class="btn btn-primary">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Category: Top-ups -->
+                            <div class="owl-item" style="width: auto;">
+                                <div class="col-12" style="width:170px">
+                                    <div class="single-grid-product mb-30">
+                                        <div class="card" style="margin-bottom:10px;">
+                                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1129414160552296508/LOL20WildRift.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                            <div class="card-body">
+                                                <div class="product-content text-center"></div>
+                                                <h5 class="card-title">LOL</h5>
+                                                <p class="card-text">$49.99</p>
+                                                <p class="card-text">500 Points</p>
+                                                <a href="/topup" class="btn btn-primary">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Category: Streaming Services -->
+                            <div class="owl-item" style="width: auto;">
+                                <div class="col-12" style="width:170px">
+                                    <div class="single-grid-product mb-30">
+                                        <div class="card" style="margin-bottom:10px;">
+                                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1129456780519415919/VALOE0B982E0B89BE0B8A3E0B982E0B8A1E0B88AE0B8B1E0B988E0B899.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                            <div class="card-body">
+                                                <div class="product-content text-center"></div>
+                                                <h5 class="card-title">Valorant</h5>
+                                                <p class="card-text">$49.99</p>
+                                                <p class="card-text">500 Points</p>
+                                                <a href="/topup" class="btn btn-primary">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Product Category: Top-ups -->
+                            <div class="owl-item" style="width: auto;">
+                                <div class="col-12" style="width:170px">
+                                    <div class="single-grid-product mb-30">
+                                        <div class="card" style="margin-bottom:10px;">
+                                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1129414159570829413/Identity20V.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                            <div class="card-body">
+                                                <div class="product-content text-center"></div>
+                                                <h5 class="card-title">Indentity</h5>
+                                                <p class="card-text">$49.99</p>
+                                                <p class="card-text">500 Points</p>
+                                                <a href="/topup" class="btn btn-primary">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product Category: Streaming Services -->
+                            <div class="owl-item" style="width: auto;">
+                                <div class="col-12" style="width:170px">
+                                    <div class="single-grid-product mb-30">
+                                        <div class="card" style="margin-bottom:10px;">
+                                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1129460020631830658/fifa-mobile_1_1.png" class=" card-img-top" alt="Game 1" style="border-radius: 10px;">
+                                            <div class="card-body">
+                                                <div class="product-content text-center"></div>
+                                                <h5 class="card-title">Fifa</h5>
+                                                <p class="card-text">$49.99</p>
+                                                <p class="card-text">500 Points</p>
+                                                <a href="/topup" class="btn btn-primary">buy now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <footer class="footer mt-auto footer-section section bg-gray-two">
+            <div class="footer-top section">
+                <div class="container">
+                    <div class="row">
+                    <div class="footer-widget col-lg-4 col-md-6 col-sm-6 col-12 mt-30">
+                            <p>Website นี้เป็นการขายรหัสสตรีมมิ่ง โปรดเลือกได้ตามใจชอบ</p>
+                        </div>
+        
+                        <div class="footer-widget col mt-30">
+                            <h4 class="title">
+                                <span class="text mb-15">Contact</span>
+                            </h4>
+        
+                            <ul class="ft-menu mt-30">
+                            <li>
+                        <a class="mb-15" href="" target="_blank">
+                          <i class="bi bi-line"></i>
+                          <span>Kinggg</span>
+                        </a>
+                      </li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget col mt-30">
+                            <h4 class="title">
+                                <span class="text mb-15">About</span>
+                            </h4>
+                            <ul class="ft-menu mt-30 ">
+                                <li>
+                                <a href="/register" class="mb-15">Register</a>
+                                </li>
+                                <li>
+                                <a href="/logout" class="mb-15">Logout</a>
+                                </li>
+                                </ul>
+                        </div>
+                            <div class="mb-3">
+                  <img class="w-50" style="max-width: 150px;" src="">
+                  </div>
+                        </div>
+                        <!--Footer Widget start-->
+                    <div class="logo-payment mt-0 ">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688114282467408/logo-ture.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688114546704405/logo-turemoney.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688115192631388/logo-kbank.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688115385565214/logo-krungsri.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688114014035998/logo-scb.png">
+                            <img src="https://cdn.discordapp.com/attachments/726406201927008276/1138688116165705838/logo-prompt-pay.jpg">
+                        </div>
+                </div>
+            </div>
+            </div>
+            <!--Footer bottom start-->
+            <div class="footer-bottom section navbar-fixed-bottom">
+                <div class="container-fluid">
+                    <div class="row no-gutters">
+                        <div class="col-12 pt-25 pb-25">
+                            <div class="row justify-content-between align-items-center">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="copyright-f">
+                                        <p>Copyright © 2023 Jesadakorn All Rights Reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Footer bottom end-->
+        </footer>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
