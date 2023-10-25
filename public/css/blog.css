@@ -162,7 +162,8 @@
     /* หรือสามารถใช้ text-align: center; และ margin: 0 auto; สำหรับรูปภาพ */
 }
 
-body {
+html,body {
+  
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
@@ -170,7 +171,8 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 15px;
 }
@@ -193,3 +195,43 @@ body {
   text-decoration: none;
   color: #333;
 }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  list-style: none;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* สามารถปรับแต่ง CSS ต่อไปตามที่คุณต้องการ */
+header .shopping{
+  position: relative;
+  text-align: right;
+}
+header .shopping img{
+  width: 40px;
+}
+header .shopping span{
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 10px;
+}
+

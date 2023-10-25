@@ -71,12 +71,15 @@
                         <div class="row justify-content-center">
                             <div class="col-12 mb-2">
                                 <div id="error"></div>
-                                <div class="form-fild">
+                                <div class="form-field">
                                     <label style="color: var(--color3) !important;">
                                         จำนวนเงินที่ต้องชำระ <span class="red required">*</span>
                                     </label>
-                                    <input type="number" id="amount" placeholder="100" class="form-control">
+                                    <input type="number" id="amount" placeholder="" class="form-control" value="49.99">
                                 </div>
+                                <label style="color: var(--color3) !important;">
+                                    แนบหลักฐานการชำระเงิน <span class="red required">*</span>
+                                <input type="file" id="payment-slip" name="payment-slip" class="form-control mt-2">
                                 <button class="btn btn-primary btn-lg mt-2" id="promptpay-btn">ยืนยันการชำระ</button>
                             </div>
                         </div>

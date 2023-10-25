@@ -7,8 +7,9 @@ const app = express();
 const port = 3000;
 
 // MongoDB connection setup
-const uri = 'mongodb://localhost:27017'; // Replace with your MongoDB connection string
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://admin2:king51131@cluster0.teen9gn.mongodb.net/?retryWrites=true&w=majority', {
+    useNewUrlParser: true, useUnifiedTopology: true 
+})
 
 client.connect(err => {
     if (err) {

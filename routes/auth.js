@@ -35,4 +35,22 @@ router.get('/logout', (req, res) => {
   res.redirect('/');
 });
 
+// "Buy Now" route (protected)
+router.get('/topup', isLoggedIn, (req, res) => {
+  res.redirect('/topup'); // Redirect to the topup page when "buy now" is clicked
+});
+
+router.get('/cart', (req, res) => {
+  res.render('cart.ejs', { products: products });
+});
+
+// Middleware to check if a user is authenticated
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/login'); // Redirect to the login page if not authenticated
+}
+
+
 module.exports = router;
