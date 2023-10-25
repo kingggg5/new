@@ -4,12 +4,12 @@ const ejs = require('ejs')
 const mongoose = require('mongoose')
 const expressSession = require('express-session')
 const flash = require('connect-flash')
-
-
-// MongoDB Connection
-mongoose.connect('mongodb+srv://admin2:king51131@cluster0.teen9gn.mongodb.net/?retryWrites=true&w=majority', {
-    useNewUrlParser: true
-})
+const bodyParser = require('body-parser')
+const products = require("./data");
+const path = require('path')
+const bcrypt = require('bcrypt');
+const connectDB = require('./db.js');
+connectDB();
 
 global.loggedIn = null
 
@@ -22,14 +22,16 @@ const loginUserController = require('./controllers/loginUserController')
 const logoutController = require('./controllers/logoutController')
 const homeController = require('./controllers/homeController')
 const topupController = require('./controllers/topupController')
-const accController = require('./controllers/accController')
+
 
 // Middleware
 const redirectIfAuth = require('./middleware/redirectIfAuth')
 const authMiddleware = require('./middleware/authMiddleware')
 
+
 app.use(express.static('public'))
 app.use(express.json())
+app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded())
 app.use(flash())
 app.use(expressSession({
@@ -47,10 +49,15 @@ app.get('/login', redirectIfAuth, loginController)
 app.get('/register', redirectIfAuth, registerController)
 app.post('/user/register', redirectIfAuth, storeUserController)
 app.post('/user/login', redirectIfAuth, loginUserController)
-app.get('/acc', redirectIfAuth, accController)
 app.get('/topup', redirectIfAuth, topupController)
 app.get('/logout', logoutController)
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.get('/products', async (req, res) => {
+    // รายละเอียดเราไม่ควรแก้ไขอะไรเลยในส่วนนี้
+});
 
 app.listen(4000, () => {
     console.log("App listening on port 4000")
