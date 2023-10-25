@@ -14,6 +14,9 @@ const UserSchema = new Schema({
     credit: {
         type: Number,
         default: 0  // You can set a default credit value if needed
+    },
+    paymentSlip: {
+        type: String, // Store the path to the uploaded payment slip
     }
 })
 
